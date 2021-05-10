@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keyboard{
+    width: 840px;
+    height: 340px;
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: -5px -5px 10px #fff, 5px 5px 10px #555;
+    display: block;
+    padding: 10px 15px;
+}
+.row{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.row-0{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.row-0 .key-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    cursor: pointer;
+}
+.row-0 .light-1{
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 6%;
+    left: 2.5%;
+    transform: translate(-50%,-10%);
+    background: #111;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.4s;
+}
+.row-0 .light-2{
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 6%;
+    left: 4%;
+    transform: translate(-50%,-10%);
+    background: #111;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.row .key{
+    display: inline-block;
+    width: auto;
+    min-width: 25px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #eee;
+    box-shadow: -5px -5px 5px #fff, 5px 5px 5px #555;
+    padding: 5px 10px;
+    margin: 7px 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.row .key span{
+    display: none;
+}
+.row .key:active{
+    box-shadow: -5px -5px 5px #fff inset, 2px 2px 5px #555 inset;
+    color: rgb(0, 119, 255);
+}
+.key.backspace{
+    padding: 5px 17px;
+}
+.key.tab{
+    padding: 5px 25px;
+}
+.key.key2{
+    font-size: 19px;
+    padding: 5px 24px;
+}
+.key.caps{
+    padding: 5px 19px;
+}
+.key.enter{
+    padding: 5px 30px;
+}
+.key.shift1{
+    padding: 5px 45px;
+    letter-spacing: 1px;
+    margin-right: 15px;
+}
+.key.shift2{
+    padding: 5px 45px;
+    letter-spacing: 1px;
+    margin-right: 6px;
+}
+.key.ctrl{
+    padding: 5px 25px;
+}
+.key.win{
+    padding: 5px 21px;
+    font-size: 20px;
+}
+.key.alt{
+    padding: 5px 15px;
+}
+.key.space{
+    padding: 5px 164px;
+}
+.key.delete{
+    padding: 5px 14px;
+}
+input{
+    display: none;
+}
+
+#big:checked ~ .keyboard .row .alfa{
+    text-transform: uppercase;
+} 
+#big:checked ~ .keyboard .row-0 .light-1{
+    background-color: aqua;
+    opacity: 1;
+    box-shadow: 0 0 5px aqua;
+}
+#num:checked ~ .keyboard .row-0 .light-2{
+    background-color: rgb(255, 106, 0);
+    opacity: 1;
+    box-shadow: 0 0 5px rgb(255, 106, 0);
+}
+#num:checked ~ .keyboard .row .num p{
+    display: none;
+}
+#num:checked ~ .keyboard .row .num span{
+    display: block;
+}
